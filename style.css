@@ -301,3 +301,19 @@ input[type="number"] {
     text-align: center;
     font-size: clamp(14px, 1.8vw, 16px);
 }
+
+.green-note {
+    color: #2ecc71;
+}
+
+.purple-note {
+    color: #9b59b6;
+}
+
+.red-note {
+    color: #e74c3c;
+}
+
+.blue-note {
+    color: #3498db;
+}
