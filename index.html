@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>My Algorithm Notes</title>
+</head>
+<body>
+  <div class="flipbook">
+    <!-- Front cover -->
+    <div class="hard">My Algorithm Notes <small>~ YourName</small></div>
+    <div class="hard"></div>
+
+    <!-- Linear Search Pages -->
+    <div class="page">
+      <h2>Linear Search</h2>
+      <div class="sticky-notes">
+        <p>Linear search is a simple search algorithm that checks every element in a list one by one until it finds the target or reaches the end.</p>
+      </div>
+    </div>
+    <div class="page">
+      <h3>How It Works</h3>
+      <ol>
+        <div class="sticky-notes">
+          <li>Start at the first element.</li>
+          <li>Compare it with the target.</li>
+          <li>If it matches, return the index.</li>
+          <li>If not, move to the next element.</li>
+          <li>Keep going until the target is found or the list ends.</li>
+        </div>
+      </ol>
+    </div>
+    <div class="page">
+      <h3>Pseudocode</h3>
+      <pre>
+        <div class="animation-stage">
+for each index in the list:
+    if list[index] == target:
+        return index
+return not found
+        </div>
+      </pre>
+    </div>
+    <div class="page">
+      <h3>Python Example</h3>
+      <pre>
+        <div class="animation-stage">
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
+        </div>
+      </pre>
+    </div>
+    <div class="book">
+
+          <div class="page-content">           
+            <div class="animation-stage">
+              <div class="frame-container" id="frame-container">
+                <div class="frame-number">Frame: <span id="current-frame">0</span>/<span id="total-frames">0</span></div>
+                <div class="stopwatch">Time: <span id="time-counter">0.0</span>s</div>
+                <div class="target-display">Target: <span id="target-value-display">5</span></div>
+                
+                <div class="array-container" id="array-container"></div>
+                
+                <div class="thought-bubble" id="thought-bubble">
+                  Let's start searching from the first element!
+                </div>
+              </div>
+              
+              <div class="progress-bar">
+                <div class="progress" id="progress-bar"></div>
+              </div>
+            </div>
+            
+            <div class="result-message" id="result-message"></div>
+            <div class="complexity-info" id="complexity-info"></div>
+            
+            <h3>Algorithm Steps:</h3>
+            <ol class="algorithm-steps" id="algorithm-steps">
+              <li><span class="highlight">Start</span> from the first element (index 0).</li>
+              <li>Compare the <span class="highlight">target</span> value with the current element.</li>
+              <li>If a <span class="highlight">match</span> is found, return the index.</li>
+              <li>If not, move to the <span class="highlight">next</span> element.</li>
+              <li>Repeat until the <span class="highlight">end</span> of the list.</li>
+              <li>If no match is found, return <span class="highlight">-1</span>.</li>
+            </ol>
+            
+            <div class="controls">
+              <div class="control-row">
+                <input type="number" id="target-input" value="5" min="1" max="99">
+                <button class="sticky-btn" id="generate-btn">Generate</button>
+                <button class="sticky-btn" id="start-btn">Start</button>
+              </div>
+              <div class="control-row">
+                <button class="sticky-btn" id="prev-btn" disabled>←</button>
+                <button class="sticky-btn" id="next-btn" disabled>→</button>
+                <button class="sticky-btn" id="pause-btn" disabled>Pause</button>
+                <button class="sticky-btn" id="reset-btn">Reset</button>
+              </div>
+            </div>
+            
+          </div>
+
+      </div>
+    <div class="page">
+      <h3>Example: Linear Search Animation</h3>
+      <div class="animation-stage" id="linear-search-animation">
+        <div class="array-container">
+          <div class="array-element" data-value="4">4</div>
+          <div class="array-element" data-value="2">2</div>
+          <div class="array-element" data-value="7">7</div>
+          <div class="array-element" data-value="1">1</div>
+          <div class="array-element" data-value="9">9</div>
+        </div>
+        <div class="thought-bubble" id="animation-message">Starting search for 7...</div>
+        <button class="sticky-notes" id="start-animation">Start Animation</button>
+      </div>
+    </div>
+    <div class="page">
+      <h3>Pros & Cons</h3>
+      <div class="animation-stage">
+        <p><strong>Pros:</strong> Easy to write, works on unsorted lists.</p>
+        <p><strong>Cons:</strong> Slow for big lists (O(n) time).</p>
+      </div>
+    </div>
+
+    <!-- Back cover -->
+    <div class="hard"></div>
+    <div class="hard">End of Notes <small>~ YourName</small></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="jquery.js"></script>
+  <script src="turn.js"></script>
+  <script>
+    $(".flipbook").turn();
+  </script>
+</body>
+</html>
