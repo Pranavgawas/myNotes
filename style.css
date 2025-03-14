@@ -251,3 +251,34 @@ progress-bar {
     background-color: #b3e5fc;
     transform: scale(1.02);
 }
+
+.thought-bubble {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: white;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    padding: 5px;
+    max-width: 80%;
+    font-size: clamp(12px, 1.8vw, 14px);
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+  
+.thought-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-right: 2px solid #3498db;
+    border-bottom: 2px solid #3498db;
+    transform: translateX(-50%) rotate(45deg);
+}
