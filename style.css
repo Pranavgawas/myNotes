@@ -93,6 +93,9 @@ body {
     font-size: clamp(14px, 1.8vw, 16px);
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     transform: rotate(-1deg);
+    width: 80%; /* Sets a width that leaves space on sides */
+    max-width: 600px; /* Optional: limits maximum width */
+    margin: 0 auto; /* Centers the div with equal margins on left and right */
 }
 
 .thought-bubble {
@@ -176,12 +179,19 @@ button {
     transform: rotate(-1deg);
 }
 
-progress-bar {
+.progress-bar {
     width: 100%;
     height: 3px;
     background-color: #ecf0f1;
     border-radius: 3px;
     margin-top: 3px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #3498db;
+    width: 0%;
+    transition: width 0.3s;
 }
 
 .frame-container {
@@ -199,7 +209,7 @@ progress-bar {
     justify-content: center;
     position: relative;
     margin-top: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 70px;
 }
   
 .array-element {
@@ -281,4 +291,13 @@ progress-bar {
     border-right: 2px solid #3498db;
     border-bottom: 2px solid #3498db;
     transform: translateX(-50%) rotate(45deg);
+}
+
+input[type="number"] {
+    width: clamp(50px, 12vw, 60px);
+    height: clamp(24px, 5vw, 30px);
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    text-align: center;
+    font-size: clamp(14px, 1.8vw, 16px);
 }
